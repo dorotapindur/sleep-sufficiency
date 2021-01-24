@@ -67,7 +67,7 @@ function sleepRequirements() {
 function produceMessage() {
     message.innerHTML = '';
     sleepRequirements();
-    sleep = parseInt(sleepInput.value);
+    sleep = parseFloat(sleepInput.value);
     console.log(sleep);
     if (sleep < 0) {
         alert(`Are you sure you've slept ${sleep} hours?`);
