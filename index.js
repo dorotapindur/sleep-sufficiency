@@ -5,6 +5,8 @@ const checkButton = document.getElementById("check");
 let age;
 let sleep;
 let typeOfPerson;
+let minSleep;
+let maxSleep;
 
 function setTypeOfPerson() {
     age = ageInput.value;
@@ -30,69 +32,58 @@ function setTypeOfPerson() {
         }
         console.log('age: ' + ageInput.value);
     } else {
-        alert('Please enter your age');
+        alert('Please enter your age. It should be higher than 0.');
+        ageInput.value = 0;
     };
 };
+function sleepRequirements() {
+    setTypeOfPerson();
+    switch (typeOfPerson) {
+        case 'baby':
+            minSleep = 10;
+            maxSleep = 13;
+            break;
+        case 'kid':
+            minSleep = 9;
+            maxSleep = 11;
+            break;
+        case 'teenager':
+            minSleep = 8;
+            maxSleep = 10;
+            break;
+        case 'adult':
+            minSleep = 7;
+            maxSleep = 9;
+            break;
+        case 'older adult':
+            minSleep = 7;
+            maxSleep = 8;
+            break;
+        case 'dead':
+            message.innerHTML = `You're probably sleeping forever, rest in peace.`;
+            break;    
+    }
+};
 function produceMessage() {
+    message.innerHTML = '';
+    sleepRequirements();
     sleep = sleepInput.value;
-    
-    if (sleep > 0) {
-        switch (typeOfPerson) {
-            case 'baby':
-                if (sleep < 10) {
-                    message.innerHTML = 'This was not enough! You should sleep at least 10 hours.';
-                } else if (sleep <= 13) {
-                    message.innerHTML = 'You have slept well.';
-                } else if (sleep > 13) {
-                    message.innerHTML = `You've slept too much!`;
-                };
-                break;
-            case 'kid':
-                if (sleep < 9) {
-                    message.innerHTML = 'This was not enough!';
-                } else if (sleep <= 11) {
-                    message.innerHTML = 'You have slept well.';
-                } else if (sleep > 11) {
-                    message.innerHTML = `You've slept too much!`;
-                };
-                break;
-            case 'teenager':
-                if (sleep < 8) {
-                    message.innerHTML = 'This was not enough!';
-                } else if (sleep <= 10) {
-                    message.innerHTML = 'You have slept well.';
-                } else if (sleep > 10) {
-                    message.innerHTML = `You've slept too much!`;
-                };
-                break;
-            case 'adult':
-                if (sleep < 7) {
-                    message.innerHTML = 'This was not enough!';
-                } else if (sleep <= 9) {
-                    message.innerHTML = 'You have slept well.';
-                } else if (sleep > 9) {
-                    message.innerHTML = `You've slept too much!`;
-                };
-                break;
-            case 'older adult':
-                if (sleep < 7) {
-                    message.innerHTML = 'This was not enough!';
-                } else if (sleep <= 8) {
-                    message.innerHTML = 'You have slept well.';
-                } else if (sleep > 8) {
-                    message.innerHTML = `You've slept too much!`;
-                };
-                break;
-            case 'dead':
-                message.innerHTML = `You're probably sleeping forever, rest in peace.`;
-                break;
-        }
-    } else {
+    if (sleep < 0) {
+        alert(`Are you sure you've slept ${sleep} hours?`);
+        sleepInput.value = 0;
+    } else if (sleep > 0) {
+        if (sleep < minSleep) {
+            message.innerHTML = `This was not enough! You should sleep at least ${minSleep} hours.`;
+        } else if (sleep <= maxSleep) {
+            message.innerHTML = 'You have slept well.';
+        } else if (sleep > maxSleep) {
+            message.innerHTML = `You've slept too much! You shouldn't sleep longer than ${maxSleep} hours.`;
+        };
+    } else if (age > 0) {
         message.innerHTML = `You haven't slept at all!`;
     }
-}
+};
 
 checkButton.addEventListener('click', () => {
-    setTypeOfPerson();
     produceMessage();
 });
