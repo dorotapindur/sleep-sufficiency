@@ -14,17 +14,17 @@
         <form class="form">
             <div class="form__item">
                 <label>How old are you? 
-                    <input type="number" value="0" id="age-input"/>
+                    <input type="number" value="0" min="0" id="age-input"/>
                 </label>
             </div>
             <div class="form__item">
                 <label>How many hours did you sleep last night?
-                    <input type="number" value="0" id="sleep-input"/>
+                    <input type="number" value="0" min="0" id="sleep-input"/>
                 </label>
             </div>
         </form>
         <button id="check">Check</button>
-        <p class="message--js">Outgoing message</p>
+        <p class="message--js"></p>
     </main>
     <script src="index.js"></script>
 </body>
