@@ -19,23 +19,22 @@ main {
     padding: 0;
     text-align: center;
 }
-.form {
-    margin: 0;
+.clouds-wrapper {
+    box-sizing: border-box;
+    max-width: 350px;
+    display: block;
+    margin: 0 auto;
     padding: 10px;
     background: pink;
     display: flex;
     flex-flow: column;
 }
-.form__item--age {
+.item--age {
     position: relative;
-    background: green;
     width: 229px;
     height: 89px;
     margin-bottom: 10px;
     align-self: flex-end;
-}
-.cloud--age {
-    display: block;
 }
 .label--age {
     position: absolute;
@@ -44,12 +43,42 @@ main {
 }
 .input--age {
     position: absolute;
-    bottom: 25px;
+    bottom: 26px;
     right: 35%;
     width: 30px;
 }
-
-.form__item {
-    background: indigo;
+.item--sleep {
+    position: relative;
+    width: 283px;
+    height: 110px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+.label--sleep {
+    position: absolute;
+    bottom: 5px;
+    left: 20%;
+    text-align: center;
+}
+.input--sleep {
+    position: absolute;
+    bottom: 45px;
+    left: 35%;
+    width: 30px;
+}
+.button-container {
+    position: relative;
+    align-self: flex-end;
+    width: 157px;
+    height: 61px;
+}
+.check-button {
+    position: absolute;
+    bottom: 5px;
+    left: 40%;
+}
+.message {
+    text-align: center;
+    font-size: 1.1rem;
 }
 
