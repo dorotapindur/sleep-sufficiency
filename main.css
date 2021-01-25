@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+main {
+    background: rgb(91,226,255);
+    background: linear-gradient(0deg, rgba(91,226,255,1) 7%, rgba(255,255,255,1) 100%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.subtitle {
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: center;
+}
+.form {
+    margin: 0;
+    padding: 10px;
+    background: pink;
+    display: flex;
+    flex-flow: column;
+}
+.form__item--age {
+    position: relative;
+    background: green;
+    width: 229px;
+    height: 89px;
+    margin-bottom: 10px;
+    align-self: flex-end;
+}
+.cloud--age {
+    display: block;
+}
+.label--age {
+    position: absolute;
+    bottom: 5px;
+    right: 20%;
+}
+.input--age {
+    position: absolute;
+    bottom: 25px;
+    right: 35%;
+    width: 30px;
+}
+
+.form__item {
+    background: indigo;
+}
+
