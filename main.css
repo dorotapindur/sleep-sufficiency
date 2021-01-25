@@ -25,15 +25,24 @@ main {
     display: block;
     margin: 0 auto;
     padding: 10px;
-    background: pink;
     display: flex;
     flex-flow: column;
+}
+.cloud {
+    fill: #fff;
+    transition: fill .8s linear;
+}
+.cloud:hover {
+    fill:#e4e4e4;
+}
+.item--zzz {
+    margin-left: 30px;
 }
 .item--age {
     position: relative;
     width: 229px;
     height: 89px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     align-self: flex-end;
 }
 .label--age {
@@ -51,7 +60,7 @@ main {
     position: relative;
     width: 283px;
     height: 110px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     align-self: flex-start;
 }
 .label--sleep {
@@ -66,11 +75,12 @@ main {
     left: 35%;
     width: 30px;
 }
-.button-container {
+.item--button {
     position: relative;
     align-self: flex-end;
     width: 157px;
     height: 61px;
+    margin-right: 30px;
 }
 .check-button {
     position: absolute;
