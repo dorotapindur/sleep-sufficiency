@@ -63,13 +63,17 @@ function sleepRequirements() {
             break; 
     }
 };
+function changeColor(color) {
+    message.style.color = color;
+    document.body.style.backgroundColor = color;
+}
 function produceMessage() {
     message.innerHTML = '';
     sleepRequirements();
     sleep = parseFloat(sleepInput.value);
     console.log(sleep);
     if (typeOfPerson == 'dead') {
-        message.style.color = 'black';
+        changeColor('#3a3a3a');
         message.innerHTML = `You're probably sleeping forever, rest in peace.`;
     } else {
         if (sleep < 0) {
@@ -77,18 +81,17 @@ function produceMessage() {
             sleepInput.value = 0;
         } else if (age > 0 && sleep > 0) {
             if (sleep < minSleep) {
-                message.style.color = 'orangered';
+                changeColor('#ff6600');
                 message.innerHTML = `This was not enough! You should sleep at least ${minSleep} hours.`;
             } else if (sleep <= maxSleep) {
-                message.style.color = 'green';
+                changeColor('#00bb5d');
                 message.innerHTML = 'You have slept well.';
             } else if (sleep > maxSleep) {
-                message.style.color = 'blue';
+                changeColor('#002c6e');
                 message.innerHTML = `You've slept too much! You shouldn't sleep longer than ${maxSleep} hours.`;
             };
         } else if (age > 0 && sleep === 0) {
-            console.log('sleep: ' + sleep);
-            message.style.color = 'red';
+            changeColor('red');
             message.innerHTML = `You haven't slept at all! You should rest.`;
         } else {
             sleepInput.value = '0';

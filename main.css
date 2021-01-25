@@ -8,10 +8,12 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: #00e1ff;
+    transition: background-color .3s ease-in;
 }
 main {
-    background: rgb(91,226,255);
-    background: linear-gradient(0deg, rgba(91,226,255,1) 7%, rgba(255,255,255,1) 100%);
+    background: none;
+    background: linear-gradient(0deg, #ffffff00 7%, rgba(255,255,255,1) 100%);
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -29,7 +31,7 @@ main {
 .clouds-wrapper {
     max-width: 350px;
     margin: 0 auto;
-    padding: 10px 0 140px;
+    padding: 10px 10px 140px;
     display: flex;
     flex-flow: column;
 }
@@ -113,5 +115,7 @@ main {
     width: 230px;
     text-align: center;
     padding: 0 10px;
+    filter: brightness(0.5);
+    transition: color .3s ease-in;
 }
 
