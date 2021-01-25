@@ -33,7 +33,9 @@ function setTypeOfPerson() {
         console.log('age: ' + ageInput.value);
     } else {
         alert('Please enter your age. It should be higher than 0.');
-        ageInput.value = 0;
+        if (age <= 0) {
+            ageInput.value = 1;
+        };
     };
 };
 function sleepRequirements() {
@@ -86,7 +88,7 @@ function produceMessage() {
     } else if (age > 0 && sleep === 0) {
         console.log('sleep: ' + sleep);
         message.style.color = 'red';
-        message.innerHTML = `You haven't slept at all!`;
+        message.innerHTML = `You haven't slept at all! You should rest.`;
     } else {
         sleepInput.value = '0';
     }
