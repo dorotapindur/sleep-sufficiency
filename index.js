@@ -60,10 +60,7 @@ function sleepRequirements() {
         case 'older adult':
             minSleep = 7;
             maxSleep = 8;
-            break;
-        case 'dead':
-            message.innerHTML = `You're probably sleeping forever, rest in peace.`;
-            break;    
+            break; 
     }
 };
 function produceMessage() {
@@ -71,27 +68,31 @@ function produceMessage() {
     sleepRequirements();
     sleep = parseFloat(sleepInput.value);
     console.log(sleep);
-    if (sleep < 0) {
-        alert(`Are you sure you've slept ${sleep} hours?`);
-        sleepInput.value = 0;
-    } else if (age > 0 && sleep > 0) {
-        if (sleep < minSleep) {
-            message.style.color = 'orange';
-            message.innerHTML = `This was not enough! You should sleep at least ${minSleep} hours.`;
-        } else if (sleep <= maxSleep) {
-            message.style.color = 'green';
-            message.innerHTML = 'You have slept well.';
-        } else if (sleep > maxSleep) {
-            message.style.color = 'blue';
-            message.innerHTML = `You've slept too much! You shouldn't sleep longer than ${maxSleep} hours.`;
-        };
-    } else if (age > 0 && sleep === 0) {
-        console.log('sleep: ' + sleep);
-        message.style.color = 'red';
-        message.innerHTML = `You haven't slept at all! You should rest.`;
+    if (typeOfPerson == 'dead') {
+        message.innerHTML = `You're probably sleeping forever, rest in peace.`;
     } else {
-        sleepInput.value = '0';
-    }
+        if (sleep < 0) {
+            alert(`Are you sure you've slept ${sleep} hours?`);
+            sleepInput.value = 0;
+        } else if (age > 0 && sleep > 0) {
+            if (sleep < minSleep) {
+                message.style.color = 'orange';
+                message.innerHTML = `This was not enough! You should sleep at least ${minSleep} hours.`;
+            } else if (sleep <= maxSleep) {
+                message.style.color = 'green';
+                message.innerHTML = 'You have slept well.';
+            } else if (sleep > maxSleep) {
+                message.style.color = 'blue';
+                message.innerHTML = `You've slept too much! You shouldn't sleep longer than ${maxSleep} hours.`;
+            };
+        } else if (age > 0 && sleep === 0) {
+            console.log('sleep: ' + sleep);
+            message.style.color = 'red';
+            message.innerHTML = `You haven't slept at all! You should rest.`;
+        } else {
+            sleepInput.value = '0';
+        }
+    }   
 };
 
 checkButton.addEventListener('click', () => {
