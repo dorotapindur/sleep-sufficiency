@@ -69,6 +69,7 @@ function produceMessage() {
     sleep = parseFloat(sleepInput.value);
     console.log(sleep);
     if (typeOfPerson == 'dead') {
+        message.style.color = 'black';
         message.innerHTML = `You're probably sleeping forever, rest in peace.`;
     } else {
         if (sleep < 0) {
@@ -76,7 +77,7 @@ function produceMessage() {
             sleepInput.value = 0;
         } else if (age > 0 && sleep > 0) {
             if (sleep < minSleep) {
-                message.style.color = 'orange';
+                message.style.color = 'orangered';
                 message.innerHTML = `This was not enough! You should sleep at least ${minSleep} hours.`;
             } else if (sleep <= maxSleep) {
                 message.style.color = 'green';
