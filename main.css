@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
   
 *, *:before, *:after {
@@ -17,6 +18,7 @@ main {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    min-width: 300px;
 }
 .h1 {
     margin: 0;
@@ -24,14 +26,14 @@ main {
     text-align: center;
 }
 .subtitle {
-    margin: 0 0 20px;
+    margin: 0;
     padding: 0;
     text-align: center;
 }
 .clouds-wrapper {
     max-width: 350px;
     margin: 0 auto;
-    padding: 10px 10px 140px;
+    padding: 20px 10px 50px;
     display: flex;
     flex-flow: column;
 }
@@ -52,8 +54,8 @@ main {
     display: block;
     content: "";
     background-image: url("./dot_smaller.svg");
-    background-repeat: no-repeat;
-    width: 12px;
+    background-repeat: round;
+    width: 13px;
     height: 11px;
     position: absolute;
     bottom: -30px;
@@ -70,7 +72,7 @@ main {
     display: block;
     content: "";
     background-image: url("./dot_bigger.svg");
-    background-repeat: no-repeat;
+    background-repeat: round;
     width: 19px;
     height: 16px;
     position: absolute;
@@ -92,15 +94,15 @@ main {
     position: relative;
     width: 283px;
     height: 110px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     align-self: flex-start;
 }
 .item--sleep::before {
     display: block;
     content: "";
     background-image: url("./dot_smaller.svg");
-    background-repeat: no-repeat;
-    width: 12px;
+    background-repeat: round;
+    width: 13px;
     height: 11px;
     position: absolute;
     top: 30px;
@@ -110,7 +112,7 @@ main {
     display: block;
     content: "";
     background-image: url("./dot_bigger.svg");
-    background-repeat: no-repeat;
+    background-repeat: round;
     width: 19px;
     height: 16px;
     position: absolute;
@@ -151,8 +153,8 @@ main {
     display: block;
     content: "";
     background-image: url("./dot_smaller.svg");
-    background-repeat: no-repeat;
-    width: 12px;
+    background-repeat: round;
+    width: 13px;
     height: 11px;
     position: absolute;
     bottom: -50px;
@@ -163,27 +165,29 @@ main {
     bottom: 5px;
     left: 40%;
 }
-.bottom-container {
-    position: fixed;
-    bottom: 0;
-    margin: 0;
-    width: 100%;
-    height: 131px;
-    z-index: 1;
-}
 .bed-container {
-    position: relative;
     display: block;
     width: 278px;
+    height: 139px;
     margin: 0 auto;
+    position: relative;
 }
-.message {
+.message-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 24px;
     width: 230px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    margin: 0;
     padding: 0 10px;
+}
+.message {
+    margin: 0;
+    padding: 0;
     filter: brightness(0.5);
     transition: color .3s ease-in;
 }
