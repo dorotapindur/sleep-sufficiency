@@ -43,7 +43,21 @@ main {
     fill:#e4e4e4;
 }
 .item--zzz {
+    width: 96px;
+    height: 37px;
     margin-left: 30px;
+    position: relative;
+}
+.item--zzz::after {
+    display: block;
+    content: "";
+    background-image: url("./dot_smaller.svg");
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 11px;
+    position: absolute;
+    bottom: -30px;
+    right: 10px;
 }
 .item--age {
     position: relative;
@@ -51,6 +65,17 @@ main {
     height: 89px;
     margin-bottom: 20px;
     align-self: flex-end;
+}
+.item--age::after {
+    display: block;
+    content: "";
+    background-image: url("./dot_bigger.svg");
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 16px;
+    position: absolute;
+    bottom: -35px;
+    right: 40px;
 }
 .label--age {
     position: absolute;
@@ -70,6 +95,28 @@ main {
     margin-bottom: 30px;
     align-self: flex-start;
 }
+.item--sleep::before {
+    display: block;
+    content: "";
+    background-image: url("./dot_smaller.svg");
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 11px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+.item--sleep::after {
+    display: block;
+    content: "";
+    background-image: url("./dot_bigger.svg");
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 16px;
+    position: absolute;
+    bottom: -40px;
+    left: 45%;
+}
 .label--sleep {
     position: absolute;
     bottom: 5px;
@@ -88,6 +135,28 @@ main {
     width: 157px;
     height: 61px;
     margin-right: 30px;
+}
+.item--button::before {
+    display: block;
+    content: "";
+    background-image: url("./dot_bigger.svg");
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 16px;
+    position: absolute;
+    bottom: -30px;
+    left: 40%;
+}
+.item--button::after {
+    display: block;
+    content: "";
+    background-image: url("./dot_smaller.svg");
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 11px;
+    position: absolute;
+    bottom: -50px;
+    right: 60px;
 }
 .check-button {
     position: absolute;
