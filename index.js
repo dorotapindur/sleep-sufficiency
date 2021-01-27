@@ -119,7 +119,7 @@ function produceMessage() {
                 changeColor('#00bb5d');
                 message.innerHTML = 'You have slept well.';
             } else if (sleep > maxSleep) {
-                changeColor('#002c6e');
+                changeColor('#25006b');
                 message.innerHTML = `You've slept too much! You shouldn't sleep longer than ${maxSleep} hours.`;
             };
         } else if (age > 0 && sleep === 0) {
