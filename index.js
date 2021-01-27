@@ -12,19 +12,28 @@ let clear;
 function setTypeOfPerson() {
     age = ageInput.value;
     if (age > 0) {
-        if (age < 6) {
-            typeOfPerson = 'baby';
+        if (age < 4/12) {
+            typeOfPerson = 'newborn';
             console.log(typeOfPerson);
-        } else if (age < 14) {
+        } else if (age < 1) {
+            typeOfPerson = 'infant';
+            console.log(typeOfPerson);
+        } else if (age < 2) {
+            typeOfPerson = 'toddler';
+            console.log(typeOfPerson);
+        } else if (age < 5) {
+            typeOfPerson = 'preschooler';
+            console.log(typeOfPerson);
+        } else if (age < 13) {
             typeOfPerson = 'kid';
             console.log(typeOfPerson);
-        } else if (age < 18) {
+        } else if (age < 17) {
             typeOfPerson = 'teenager';
             console.log(typeOfPerson);
         } else if (age < 64) {
             typeOfPerson = 'adult';
             console.log(typeOfPerson);
-        } else if (age < 100) {
+        } else if (age < 120) {
             typeOfPerson = 'older adult';
             console.log(typeOfPerson);
         } else if (age >= 120) {
@@ -42,7 +51,19 @@ function setTypeOfPerson() {
 function sleepRequirements() {
     setTypeOfPerson();
     switch (typeOfPerson) {
-        case 'baby':
+        case 'newborn':
+            minSleep = 14;
+            maxSleep = 17;
+            break;
+        case 'infant':
+            minSleep = 12;
+            maxSleep = 15;
+            break;
+        case 'toddler':
+            minSleep = 11;
+            maxSleep = 14;
+            break;
+        case 'preschooler':
             minSleep = 10;
             maxSleep = 13;
             break;
