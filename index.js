@@ -7,6 +7,7 @@ let sleep;
 let typeOfPerson;
 let minSleep;
 let maxSleep;
+let clear;
 
 function setTypeOfPerson() {
     age = ageInput.value;
@@ -64,8 +65,18 @@ function sleepRequirements() {
     }
 };
 function changeColor(color) {
+    window.clearTimeout(clear);
+    console.log('clear timeout');
     message.style.color = color;
     document.body.style.backgroundColor = color;
+    function removeColor() {
+        message.style.color = '#ffffff00';
+        document.body.style.backgroundColor =  '#00e1ff';
+        ageInput.value = 1;
+        sleepInput.value = 0;
+        console.log('remove color');
+    };
+    clear = window.setTimeout(removeColor, 5000);
 }
 function produceMessage() {
     message.innerHTML = '';
