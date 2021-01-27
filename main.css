@@ -1,31 +1,53 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 html {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: 'Handlee', cursive;
 }
   
 *, *:before, *:after {
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
 }
 body {
     width: 100vw;
     margin: 0;
     padding: 0;
     background-color: #00e1ff;
+    -webkit-transition: background-color .3s ease-in;
+    -o-transition: background-color .3s ease-in;
     transition: background-color .3s ease-in;
 }
 main {
     background: none;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(7%, #ffffff00), to(rgba(255,255,255,1)));
+    background: -o-linear-gradient(bottom, #ffffff00 7%, rgba(255,255,255,1) 100%);
     background: linear-gradient(0deg, #ffffff00 7%, rgba(255,255,255,1) 100%);
     margin: 0 auto;
     padding: 3vh 0 0;
     min-height: calc(100vh - 40px);
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     overflow-x: hidden;
 }
 .h1 {
@@ -40,7 +62,9 @@ main {
 }
 @media screen and (min-height: 1000px) {
     .header {
-        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+                transform: scale(1.5);
     }
 }
 .clouds-wrapper {
@@ -50,17 +74,28 @@ main {
     height: 60vh;
     margin: 0 auto;
     padding: 20px 10px 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .cloud {
     fill: #fff;
+    -webkit-transition: fill .8s linear;
+    -o-transition: fill .8s linear;
     transition: fill .8s linear;
 }
 @media screen and (min-height: 1000px) {
     .cloud {
-        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+                transform: scale(1.5);
     }
 }
 .cloud:hover {
@@ -88,7 +123,8 @@ main {
     width: 229px;
     height: 89px;
     margin-bottom: 20px;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
 }
 .item--age::before {
     display: block;
@@ -128,7 +164,8 @@ main {
     width: 283px;
     height: 110px;
     margin-bottom: 20px;
-    align-self: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
 }
 .item--sleep::after {
     display: block;
@@ -155,7 +192,8 @@ main {
 }
 .item--button {
     position: relative;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     width: 157px;
     height: 61px;
     margin-right: 30px;
@@ -185,7 +223,7 @@ main {
 .check-button {
     position: absolute;
     bottom: 5px;
-    left: 40%;
+    left: 37%;
 }
 .bed-container {
     position: relative;
@@ -197,7 +235,9 @@ main {
 }
 @media screen and (min-height: 1000px) {
     .bed-container {
-        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1);
     }
 }
 .message-container {
@@ -205,9 +245,15 @@ main {
     bottom: 30px;
     width: 277px;
     height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
     margin: 0;
     padding: 0 30px;
@@ -215,8 +261,11 @@ main {
 .message {
     margin: 0;
     padding: 0;
-    filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
+            filter: brightness(0.5);
     color: white;
+    -webkit-transition: color .3s ease-in;
+    -o-transition: color .3s ease-in;
     transition: color .3s ease-in;
 }
 footer {
@@ -225,9 +274,15 @@ footer {
     font-size: small;
     text-align: center;
     padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 footer p {
     margin: 0;
