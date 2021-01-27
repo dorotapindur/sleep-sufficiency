@@ -9,6 +9,7 @@ html {
     box-sizing: inherit;
 }
 body {
+    width: 100vw;
     margin: 0;
     padding: 0;
     background-color: #00e1ff;
@@ -21,21 +22,26 @@ main {
     padding: 3vh 0 0;
     min-height: calc(100vh - 40px);
     width: 100%;
-    min-width: 300px;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 .h1 {
     margin: 0;
-    padding: 10px 0 0;
+    padding: 0;
     text-align: center;
 }
 .subtitle {
     margin: 0;
     padding: 0;
     text-align: center;
+}
+@media screen and (min-height: 1000px) {
+    .header {
+        transform: scale(1.5);
+    }
 }
 .clouds-wrapper {
     width: 100%;
@@ -47,11 +53,15 @@ main {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-
 }
 .cloud {
     fill: #fff;
     transition: fill .8s linear;
+}
+@media screen and (min-height: 1000px) {
+    .cloud {
+        transform: scale(1.5);
+    }
 }
 .cloud:hover {
     fill:#e4e4e4;
@@ -70,7 +80,7 @@ main {
     width: 13px;
     height: 11px;
     position: absolute;
-    bottom: -5vmax;
+    bottom: -3vmax;
     right: 10px;
 }
 .item--age {
@@ -88,7 +98,7 @@ main {
     width: 19px;
     height: 16px;
     position: absolute;
-    bottom: -5vmax;
+    bottom: -3vmax;
     right: 25%;
 }
 .item--age::after {
@@ -99,7 +109,7 @@ main {
     width: 13px;
     height: 11px;
     position: absolute;
-    bottom: -9vmax;
+    bottom: -6vmax;
     right: 35%;
 }
 .label--age {
@@ -128,7 +138,7 @@ main {
     width: 19px;
     height: 16px;
     position: absolute;
-    bottom: -6vmax;
+    bottom: -3vmax;
     left: 45%;
 }
 .label--sleep {
@@ -158,7 +168,7 @@ main {
     width: 19px;
     height: 16px;
     position: absolute;
-    bottom: -5vmax;
+    bottom: -3vmax;
     left: 40%;
 }
 .item--button::after {
@@ -169,7 +179,7 @@ main {
     width: 13px;
     height: 11px;
     position: absolute;
-    bottom: -9vmax;
+    bottom: -5vmax;
     right: 60px;
 }
 .check-button {
@@ -184,6 +194,11 @@ main {
     width: 278px;
     height: 139px;
     margin: 0 auto;
+}
+@media screen and (min-height: 1000px) {
+    .bed-container {
+        transform: scale(1.1);
+    }
 }
 .message-container {
     position: absolute;
