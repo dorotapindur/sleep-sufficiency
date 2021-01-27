@@ -218,3 +218,16 @@ footer p {
     margin: 0;
     padding: 0;
 }
+footer a {
+    color: #00504c;
+    font-weight: bold;
+}
+footer a:visited {
+    color: #00504c;
+}
+footer a:hover {
+    color: #ffffff;
+}
+footer a:active {
+    color: #c2c2c2;
+}
