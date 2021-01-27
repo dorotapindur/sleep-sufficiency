@@ -18,9 +18,13 @@ main {
     background: none;
     background: linear-gradient(0deg, #ffffff00 7%, rgba(255,255,255,1) 100%);
     margin: 0;
-    padding: 0;
+    padding: 3vh 0 0;
     min-height: 100vh;
     min-width: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
 }
 .h1 {
     margin: 0;
@@ -33,11 +37,16 @@ main {
     text-align: center;
 }
 .clouds-wrapper {
+    width: 100%;
     max-width: 350px;
-    margin: 0 auto;
+    min-height: 407px;
+    height: 60vh;
+    margin: 0;
     padding: 20px 10px 50px;
     display: flex;
     flex-flow: column;
+    justify-content: space-between;
+
 }
 .cloud {
     fill: #fff;
@@ -60,7 +69,7 @@ main {
     width: 13px;
     height: 11px;
     position: absolute;
-    bottom: -30px;
+    bottom: -5vmax;
     right: 10px;
 }
 .item--age {
@@ -70,7 +79,7 @@ main {
     margin-bottom: 20px;
     align-self: flex-end;
 }
-.item--age::after {
+.item--age::before {
     display: block;
     content: "";
     background-image: url("./dot_bigger.svg");
@@ -78,8 +87,19 @@ main {
     width: 19px;
     height: 16px;
     position: absolute;
-    bottom: -35px;
-    right: 40px;
+    bottom: -5vmax;
+    right: 25%;
+}
+.item--age::after {
+    display: block;
+    content: "";
+    background-image: url("./dot_smaller.svg");
+    background-repeat: round;
+    width: 13px;
+    height: 11px;
+    position: absolute;
+    bottom: -9vmax;
+    right: 35%;
 }
 .label--age {
     position: absolute;
@@ -99,17 +119,6 @@ main {
     margin-bottom: 20px;
     align-self: flex-start;
 }
-.item--sleep::before {
-    display: block;
-    content: "";
-    background-image: url("./dot_smaller.svg");
-    background-repeat: round;
-    width: 13px;
-    height: 11px;
-    position: absolute;
-    top: 30px;
-    right: 20px;
-}
 .item--sleep::after {
     display: block;
     content: "";
@@ -118,7 +127,7 @@ main {
     width: 19px;
     height: 16px;
     position: absolute;
-    bottom: -40px;
+    bottom: -6vmax;
     left: 45%;
 }
 .label--sleep {
@@ -148,7 +157,7 @@ main {
     width: 19px;
     height: 16px;
     position: absolute;
-    bottom: -30px;
+    bottom: -5vmax;
     left: 40%;
 }
 .item--button::after {
@@ -159,7 +168,7 @@ main {
     width: 13px;
     height: 11px;
     position: absolute;
-    bottom: -50px;
+    bottom: -9vmax;
     right: 60px;
 }
 .check-button {
@@ -168,29 +177,30 @@ main {
     left: 40%;
 }
 .bed-container {
+    position: relative;
+    bottom: 0;
     display: block;
     width: 278px;
     height: 139px;
     margin: 0 auto;
-    position: relative;
 }
 .message-container {
     position: absolute;
     bottom: 30px;
-    left: 24px;
-    width: 230px;
+    width: 277px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 30px;
 }
 .message {
     margin: 0;
     padding: 0;
     filter: brightness(0.5);
+    color: white;
     transition: color .3s ease-in;
 }
 
