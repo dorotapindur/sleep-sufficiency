@@ -252,9 +252,9 @@ main {
 }
 @media screen and (min-height: 800px) {
     .bed-container {
-        -webkit-transform: scale(1.2) translate(0, -11px);
-            -ms-transform: scale(1.2) translate(0, -11px);
-                transform: scale(1.2) translate(0, -11px);
+        -webkit-transform: scale(1.2) translate(0, -12px);
+            -ms-transform: scale(1.2) translate(0, -12px);
+                transform: scale(1.2) translate(0, -12px);
         
     }
 }
