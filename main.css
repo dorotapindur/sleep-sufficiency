@@ -59,6 +59,13 @@ main {
     padding: 0;
     text-align: center;
 }
+@media screen and (min-height: 800px) {
+    .header {
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2);
+    }
+}
 @media screen and (min-height: 1000px) {
     .header {
         -webkit-transform: scale(1.5);
@@ -90,11 +97,18 @@ main {
     -o-transition: fill .8s linear;
     transition: fill .8s linear;
 }
+@media screen and (min-height: 800px) {
+    .cloud {
+        -webkit-transform: scale(1.2) translate(0, -25px);
+            -ms-transform: scale(1.2) translate(0, -25px);
+                transform: scale(1.2) translate(0, -25px);
+    }
+}
 @media screen and (min-height: 1000px) {
     .cloud {
-        -webkit-transform: scale(1.5);
-            -ms-transform: scale(1.5);
-                transform: scale(1.5);
+        -webkit-transform: scale(1.5) translate(0, -35px);
+            -ms-transform: scale(1.5) translate(0, -35px);
+                transform: scale(1.5) translate(0, -35px);
     }
 }
 .cloud:hover {
@@ -115,7 +129,7 @@ main {
     height: 11px;
     position: absolute;
     bottom: -3vmax;
-    right: 10px;
+    right: 15%;
 }
 .item--age {
     position: relative;
@@ -217,7 +231,7 @@ main {
     height: 11px;
     position: absolute;
     bottom: -5vmax;
-    right: 60px;
+    right: 35%;
 }
 .check-button {
     position: absolute;
@@ -232,11 +246,20 @@ main {
     height: 139px;
     margin: 0 auto;
 }
+@media screen and (min-height: 800px) {
+    .bed-container {
+        -webkit-transform: scale(1.2) translate(0, -11px);
+            -ms-transform: scale(1.2) translate(0, -11px);
+                transform: scale(1.2) translate(0, -11px);
+        
+    }
+}
 @media screen and (min-height: 1000px) {
     .bed-container {
-        -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-                transform: scale(1.1);
+        -webkit-transform: scale(1.5) translate(0, -25px);
+            -ms-transform: scale(1.5) translate(0, -25px);
+                transform: scale(1.5) translate(0, -25px);
+        
     }
 }
 .message-container {
@@ -282,6 +305,16 @@ footer {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+}
+@media screen and (min-height: 800px) {
+    footer {
+        font-size: .9rem;
+    }
+}
+@media screen and (min-height: 1000px) {
+    footer {
+        font-size: 1rem;
+    }
 }
 footer p {
     margin: 0;
