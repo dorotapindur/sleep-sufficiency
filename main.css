@@ -129,7 +129,7 @@ main {
     width: 13px;
     height: 11px;
     position: absolute;
-    bottom: -3vmax;
+    bottom: -50%;
     right: 15%;
 }
 .item--age {
@@ -148,7 +148,7 @@ main {
     width: 19px;
     height: 16px;
     position: absolute;
-    bottom: -3vmax;
+    bottom: -30%;
     right: 25%;
 }
 .item--age::after {
@@ -159,7 +159,7 @@ main {
     width: 13px;
     height: 11px;
     position: absolute;
-    bottom: -6vmax;
+    bottom: -50%;
     right: 35%;
 }
 .label--age {
@@ -189,8 +189,8 @@ main {
     width: 19px;
     height: 16px;
     position: absolute;
-    bottom: -3vmax;
-    left: 45%;
+    bottom: -30%;
+    left: 25%;
 }
 .label--sleep {
     position: absolute;
@@ -220,7 +220,7 @@ main {
     width: 19px;
     height: 16px;
     position: absolute;
-    bottom: -3vmax;
+    bottom: -50%;
     left: 40%;
 }
 .item--button::after {
@@ -231,7 +231,7 @@ main {
     width: 13px;
     height: 11px;
     position: absolute;
-    bottom: -5vmax;
+    bottom: -80%;
     right: 35%;
 }
 .check-button {
