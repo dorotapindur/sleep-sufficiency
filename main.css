@@ -12,7 +12,10 @@ html {
             box-sizing: border-box;
     font-family: 'Handlee', cursive;
 }
-  
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} 
 *, *:before, *:after {
     -webkit-box-sizing: inherit;
             box-sizing: inherit;
