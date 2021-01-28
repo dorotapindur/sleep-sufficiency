@@ -44,7 +44,7 @@ function setTypeOfPerson() {
     } else {
         alert('Please enter your age. It should be higher than 0.');
         if (age <= 0) {
-            ageInput.value = 1;
+            ageInput.value = '';
         };
     };
 };
@@ -93,8 +93,8 @@ function changeColor(color) {
     function removeColor() {
         message.style.color = '#ffffff00';
         document.body.style.backgroundColor =  '#00e1ff';
-        ageInput.value = 1;
-        sleepInput.value = 0;
+        ageInput.value = '';
+        sleepInput.value = '';
         console.log('remove color');
     };
     clear = window.setTimeout(removeColor, 5000);
@@ -110,7 +110,7 @@ function produceMessage() {
     } else {
         if (sleep < 0) {
             alert(`Are you sure you've slept ${sleep} hours?`);
-            sleepInput.value = 0;
+            sleepInput.value = '';
         } else if (age > 0 && sleep > 0) {
             if (sleep < minSleep) {
                 changeColor('#ff6600');
@@ -126,7 +126,7 @@ function produceMessage() {
             changeColor('red');
             message.innerHTML = `You haven't slept at all! You should rest.`;
         } else {
-            sleepInput.value = '0';
+            sleepInput.value = '';
         }
     }   
 };
