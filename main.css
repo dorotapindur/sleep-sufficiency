@@ -139,23 +139,25 @@ main {
     position: relative;
     width: 229px;
     height: 89px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     -ms-flex-item-align: end;
         align-self: flex-end;
 }
 .genius-message {
+    width: 95%;
     position: absolute;
-    bottom: -50%;
+    bottom: -30%;
     left: 0%;
-    font-size: small;
+    font-size: .7rem;
     text-align: center;
-    transform: translate(-95px, -75px) rotate(-37deg);
     color: #ffffff00;
     -webkit-filter: brightness(0.5);
             filter: brightness(0.5);
     -webkit-transition: color .3s ease-in;
     -o-transition: color .3s ease-in;
     transition: color .3s ease-in;
+    margin: 0;
+    padding: 0;
 }
 .item--age::before {
     display: block;
