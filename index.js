@@ -16,15 +16,12 @@ function setTypeOfPerson() {
         if (age < 4/12) {
             typeOfPerson = 'newborn';
             console.log(typeOfPerson);
-            geniusMessage.innerHTML = `Wow! You are ${age} and you already know numbers! You must be a genius!`
         } else if (age < 1) {
             typeOfPerson = 'infant';
             console.log(typeOfPerson);
-            geniusMessage.innerHTML = `Wow! You are ${age} and you already know numbers! You must be a genius!`
         } else if (age < 2) {
             typeOfPerson = 'toddler';
             console.log(typeOfPerson);
-            geniusMessage.innerHTML = `Wow! You are ${age} and you already know numbers! You must be a genius!`
         } else if (age < 5) {
             typeOfPerson = 'preschooler';
             console.log(typeOfPerson);
@@ -107,9 +104,13 @@ function changeColor(color) {
 }
 function produceMessage() {
     message.innerHTML = '';
+    geniusMessage.innerHTML = '';
     sleepRequirements();
     sleep = parseFloat(sleepInput.value);
     console.log(sleep);
+    if (age < 2) {
+        geniusMessage.innerHTML = `Wow! You are ${age} and you already know numbers! You must be a genius!`;
+    };
     if (typeOfPerson == 'dead') {
         changeColor('#3a3a3a');
         message.innerHTML = `You're probably sleeping forever, rest in peace.`;
@@ -134,7 +135,7 @@ function produceMessage() {
         } else {
             sleepInput.value = '';
         }
-    }   
+    };  
 };
 
 checkButton.addEventListener('click', () => {
