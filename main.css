@@ -31,7 +31,7 @@ body {
 }
 main {
     background: none;
-   
+   /*background: -webkit-gradient(linear, left bottom, left top, color-stop(7%, #ffffff00), to(rgba(255,255,255,1)));*/
     background: -o-linear-gradient(bottom, #ffffff00 7%, rgba(255,255,255,1) 100%);
     background: linear-gradient(0deg, #ffffff00 7%, rgba(255,255,255,1) 100%);
     margin: 0 auto;
@@ -142,6 +142,20 @@ main {
     margin-bottom: 20px;
     -ms-flex-item-align: end;
         align-self: flex-end;
+}
+.genius-message {
+    position: absolute;
+    bottom: -50%;
+    left: 0%;
+    font-size: small;
+    text-align: center;
+    transform: translate(-95px, -75px) rotate(-37deg);
+    color: #ffffff00;
+    -webkit-filter: brightness(0.5);
+            filter: brightness(0.5);
+    -webkit-transition: color .3s ease-in;
+    -o-transition: color .3s ease-in;
+    transition: color .3s ease-in;
 }
 .item--age::before {
     display: block;
@@ -287,6 +301,7 @@ main {
 .message {
     margin: 0;
     padding: 0;
+    font-weight: bold;
     -webkit-filter: brightness(0.5);
             filter: brightness(0.5);
     color: white;

@@ -1,6 +1,7 @@
 const ageInput = document.getElementById("age-input");
 const sleepInput = document.getElementById("sleep-input");
 const message = document.querySelector(".message--js");
+const geniusMessage = document.querySelector(".genius-message--js");
 const checkButton = document.getElementById("check");
 let age;
 let sleep;
@@ -15,12 +16,15 @@ function setTypeOfPerson() {
         if (age < 4/12) {
             typeOfPerson = 'newborn';
             console.log(typeOfPerson);
+            geniusMessage.innerHTML = `Wow! You are ${age} and you already know numbers! You must be a genius!`
         } else if (age < 1) {
             typeOfPerson = 'infant';
             console.log(typeOfPerson);
+            geniusMessage.innerHTML = `Wow! You are ${age} and you already know numbers! You must be a genius!`
         } else if (age < 2) {
             typeOfPerson = 'toddler';
             console.log(typeOfPerson);
+            geniusMessage.innerHTML = `Wow! You are ${age} and you already know numbers! You must be a genius!`
         } else if (age < 5) {
             typeOfPerson = 'preschooler';
             console.log(typeOfPerson);
@@ -89,12 +93,14 @@ function changeColor(color) {
     window.clearTimeout(clear);
     console.log('clear timeout');
     message.style.color = color;
+    geniusMessage.style.color = color;
     document.body.style.backgroundColor = color;
     function removeColor() {
         message.style.color = '#ffffff00';
         document.body.style.backgroundColor =  '#00e1ff';
         ageInput.value = '';
         sleepInput.value = '';
+        geniusMessage.style.color = '#ffffff00';
         console.log('remove color');
     };
     clear = window.setTimeout(removeColor, 5000);
