@@ -103,17 +103,17 @@ function changeColor(color) {
     clear = window.setTimeout(removeColor, 5000);
 }
 function produceMessage() {
-    message.innerHTML = '';
-    geniusMessage.innerHTML = '';
+    message.textContent = '';
+    geniusMessage.textContent = '';
     sleepRequirements();
     sleep = parseFloat(sleepInput.value);
     console.log(sleep);
     if (age < 2) {
-        geniusMessage.innerHTML = `Wow! You are ${age} and you already know numbers! You must be a genius!`;
+        geniusMessage.textContent = `Wow! You are ${age} and you already know numbers! You must be a genius!`;
     };
     if (typeOfPerson == 'dead') {
         changeColor('#3a3a3a');
-        message.innerHTML = `You're probably sleeping forever, rest in peace.`;
+        message.textContent = `You're probably sleeping forever, rest in peace.`;
     } else {
         if (sleep < 0) {
             alert(`Are you sure you've slept ${sleep} hours?`);
@@ -121,17 +121,17 @@ function produceMessage() {
         } else if (age > 0 && sleep > 0) {
             if (sleep < minSleep) {
                 changeColor('#ff6600');
-                message.innerHTML = `This was not enough! You should sleep at least ${minSleep} hours.`;
+                message.textContent = `This was not enough! You should sleep at least ${minSleep} hours.`;
             } else if (sleep <= maxSleep) {
                 changeColor('#00bb5d');
-                message.innerHTML = 'You have slept well.';
+                message.textContent = 'You have slept well.';
             } else if (sleep > maxSleep) {
                 changeColor('#25006b');
-                message.innerHTML = `You've slept too much! You shouldn't sleep longer than ${maxSleep} hours.`;
+                message.textContent = `You've slept too much! You shouldn't sleep longer than ${maxSleep} hours.`;
             };
         } else if (age > 0 && sleep === 0) {
             changeColor('red');
-            message.innerHTML = `You haven't slept at all! You should rest.`;
+            message.textContent = `You haven't slept at all! You should rest.`;
         } else {
             sleepInput.value = '';
         }
